@@ -12,7 +12,7 @@ public class Main1
             System.out.println(i);
         }
 
-        //use enhanceforloop l l
+        //use enhanceforloop
         for (int myInt : myIntArray)
         {
             System.out.println(myInt);
