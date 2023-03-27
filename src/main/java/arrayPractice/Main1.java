@@ -6,11 +6,13 @@ public class Main1
         int [] myIntArray = {1, 2, 3};
         System.out.println();
 
+        //use reg forloop
         for (int i = 0; i < myIntArray.length; i++)
         {
             System.out.println(i);
         }
 
+        //use enhanceforloop l l
         for (int myInt : myIntArray)
         {
             System.out.println(myInt);
