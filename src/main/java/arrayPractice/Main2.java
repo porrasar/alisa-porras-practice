@@ -9,9 +9,9 @@ public class Main2
     {
        int [] middleNumberArray = {13, 5, 7, 68, 2};
 
-       int holdMiddleNumber = middleNumberArray[2];
+       int holdMiddleNumber = middleNumberArray.length / 2;
 
-        System.out.println("middle number in array: " + holdMiddleNumber);
+        System.out.println("middle number in array: " + middleNumberArray[holdMiddleNumber]);
     }
 
 
