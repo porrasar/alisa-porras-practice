@@ -1,7 +1,16 @@
+import org.w3c.dom.Text;
+
+import java.util.Arrays;
 import java.util.Scanner;
+
+//Read a line of text such as “I love Java.  You love Java. She loves Java.” or any other text.
+//        Split them into words
+//        Count number of times each word (excluding dot .) occurs
+//        So the end result is something like following:
 
 public class MainHomework_Monday_3_27_23 {//class beg
     String convertNumericToNumberByName;
+
 
     public static void main(String[] args)
     {//main beg
@@ -10,14 +19,20 @@ public class MainHomework_Monday_3_27_23 {//class beg
 
         String lineOfText = "I love Java. You love Java. She loves Java";  //creating a string of text
 
-        String lineOfTextWithoutDot = lineOfText.replace(".", " "); //taking all '.' out of text
-        System.out.println("line of text w/o dot: " + lineOfTextWithoutDot);
+        //taking all '.' out of text
+        String lineOfTextWithoutDot = lineOfText.replace(".", " ");
+        //System.out.println("line of text w/o dot: " + lineOfTextWithoutDot);
+
+        //split the text w/o dots by delimiter space and then create an array with all the words
+        String[] splitLineOfText = lineOfTextWithoutDot.split("\\s+");
+        //System.out.println("line of text w/o spaces: " + Arrays.toString(splitLineOfText));
+
+        //counting the number of words in splitlineoftext array
+        int lengthOfText = splitLineOfText.length;
+        //System.out.println("number of words: " + lengthOfText);
 
 
-        //String[] splitLineOfText = lineOfTextWithoutDot.split("\\s+");  //split w/o dots text by delimiter space
-
-        int numberOfWords = 0;
-
+        //define word counters
         int iHoldCount = 0;
         int loveHoldCount = 0;
         int javaHoldCount = 0;
@@ -25,104 +40,35 @@ public class MainHomework_Monday_3_27_23 {//class beg
         int sheHoldCount = 0;
         int lovesHoldCount = 0;
 
+        //for loop to find out how many times a word occurs
+       //  countTheNumberOfWords beg
+        for (int i = 0; i < lengthOfText; ++i) {//for beg
+            switch (splitLineOfText[i]) {//switch beg
+                case "I":
 
-        for (int i = 0; i <= 9; i++)
-        {//for beg//
-
-            System.out.println(" ");
-            String[] splitLineOfText = lineOfTextWithoutDot.split(" ");  //split text by using the space delimiter
-            System.out.println("split line text: " + splitLineOfText[i]);
-
-
-
-//            if (splitLineOfText[i].equals(" "))
-//            {
-//                System.out.println("break" );
-//                break;
-//
-//            }
-//            else
-//            {
-//                System.out.println("NUMBER OF WORDS: " + numberOfWords);
-//                ++numberOfWords; // adding up number of words
-//                System.out.println("number of words: " + numberOfWords);
-//            }
-
-
-            if (splitLineOfText[i].equals("I"))
-            {
-                System.out.println(" IN IF I STATEMENT");
-                ++iHoldCount;  // counting the number of 'i's
-                System.out.println("iHoldCount:  " + iHoldCount);
-                ++numberOfWords; // adding up number of words
-            }
-            else
-            if (splitLineOfText[i].equals("love"))
-            {
-                System.out.println(" IN IF love STATEMENT");
-                ++loveHoldCount;  // counting the number of 'love's
-                System.out.println("LOVE COUNT:  " + loveHoldCount);
-                ++numberOfWords; // adding up number of words
-            }
-            else
-            if (splitLineOfText[i].equals("Java"))
-            {
-
-                System.out.println(" IN IF java STATEMENT");
-                ++javaHoldCount;  // counting the number of 'java's
-                System.out.println("JAVA COUNT:  " + javaHoldCount);
-                ++numberOfWords; // adding up number of words
-            }
-            else
-            if (splitLineOfText[i].equals("you"))
-            {
-                System.out.println(" IN IF you STATEMENT");
-                ++youHoldCount; // counting the number of 'you's
-                System.out.println("YOU COUNT:  " + youHoldCount);
-                ++numberOfWords; // adding up number of words
-            }
-            else
-            if (splitLineOfText[i].equals("she"))
-            {
-                System.out.println(" IN IF she STATEMENT");
-                ++sheHoldCount;  // counting the number of 'she's
-                System.out.println("SHE COUNT:  " + sheHoldCount);
-                ++numberOfWords; // adding up number of words
-            }
-            else
-            if (splitLineOfText[i].equals("loves"))
-            {
-                System.out.println(" IN IF loves  STATEMENT");
-                ++lovesHoldCount;  // counting the number of 'love's
-                System.out.println("LOVES COUNT:  " + lovesHoldCount);
-                ++numberOfWords; // adding up number of words
-            }
-            else
-            if (splitLineOfText[i].equals(" "))
-            {
-
-                System.out.println(" IN BLANK space STATEMENT");
-                System.out.println("index before space" + i);
-                --i;
-                System.out.println("index after space" + i);
-
-            }
-            System.out.println("NUMBER OF WORDS: " + numberOfWords);
-
+                    //++iHoldCount;  // counting the number of 'i's
+                    break;
+                case "love":
+                    ++loveHoldCount;  // counting the number of 'i's
+                    break;
+                case "Java":
+                    ++javaHoldCount;  // counting the number of 'i's
+                    break;
+                case "You":
+                    ++youHoldCount;  // counting the number of 'i's
+                    break;
+                case "She":
+                    ++sheHoldCount;  // counting the number of 'i's
+                    break;
+                case "loves":
+                    ++lovesHoldCount;  // counting the number of 'i's
+                    break;
+            }//switch end
         }//for end
 
-//        int holdcounts[] = {iHoldCount, loveHoldCount, javaHoldCount, youHoldCount, sheHoldCount, lovesHoldCount};
-//
-//        for (int i = 0; i <= numberOfWords;++1)
-//        {
-//            switch (holdcounts[i])
-//            {
-//                case 1
-//
-//
-//            }
-//
-//        }
+
+
+
 
         System.out.println("\"I\" occurs " + iHoldCount);
         System.out.println("\"love\" occurs " + loveHoldCount);
@@ -132,22 +78,9 @@ public class MainHomework_Monday_3_27_23 {//class beg
         System.out.println("\"loves\" occurs " + lovesHoldCount);
 
 
-//        int i = 0;
-
-//
-//        do
-//        {//do beg
-//                String[] splitLineOfText = lineOfText.split(" ");  //split text by using the space delimiter
-//                System.out.println(splitLineOfText[i]);
-//                ++numberOfWords;
-//                System.out.println("number of words: " + numberOfWords);
-//
-//        }//do end
-//
-//        while (i <= numberOfWords);
-//
-//        //while (numberOfWordsb< i);
-
-
     }//main beg
+
+
+
+
 }//class end
