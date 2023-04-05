@@ -1,6 +1,4 @@
-package ClassPractice;
-
-import org.w3c.dom.ls.LSOutput;
+package classPractice;
 
 public class StudentRecord
 {//class beg

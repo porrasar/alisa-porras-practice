@@ -1,4 +1,4 @@
-package HomeworkPackage.Homework_Package_Tuesday_4_4_23;
+package homeworkPackage.homework_Package_Friday_3_31_23;
 
 public class Product
 {//class beg
@@ -8,6 +8,11 @@ public class Product
     private double priceOfProduct;
 
     //--------------------------------CONSTRUCTORS --------------------------------------------
+    public Product()
+    {
+
+    }
+
     public Product(String productName, double priceOfProduct)
     {//constructor with 2 arguments: product name and price of product
         this.productName = productName;

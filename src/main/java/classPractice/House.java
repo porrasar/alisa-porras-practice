@@ -1,4 +1,4 @@
-package ClassPractice;
+package classPractice;
 
 public class House
 {//class beg

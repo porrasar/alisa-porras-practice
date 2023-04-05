@@ -1,4 +1,4 @@
-package ClassPractice;
+package classPractice;
 
 public class Main
 {//class beg

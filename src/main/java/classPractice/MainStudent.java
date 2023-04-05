@@ -1,4 +1,4 @@
-package ClassPractice;
+package classPractice;
 
 public class MainStudent
         //------------third class lab exercise for 3/31/23

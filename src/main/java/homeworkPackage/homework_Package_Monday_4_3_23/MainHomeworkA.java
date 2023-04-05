@@ -1,4 +1,4 @@
-package HomeworkPackage.Homework_Package_Monday_4_3_23;
+package homeworkPackage.homework_Package_Monday_4_3_23;
 
 /*
 Remove existing “address” field (and its getter and setter) from the Customer class
@@ -16,8 +16,6 @@ Modify “getCustomerInfo” method to display the addresses of the customer as 
 In the “main” method of the “MainHomeworkMarch31st” class, please add a new address to a “Customer” object using “addAddress(Address address)” method
 
 */
-
-import ClassPractice.House;
 
 public class MainHomeworkA
 {//class beg

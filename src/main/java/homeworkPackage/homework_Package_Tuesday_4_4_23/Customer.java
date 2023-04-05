@@ -1,4 +1,4 @@
-package HomeworkPackage.Homework_Package_Tuesday_4_4_23;
+package homeworkPackage.homework_Package_Tuesday_4_4_23;
 
 public class Customer
 {//class beg

@@ -1,6 +1,5 @@
-import org.w3c.dom.Text;
+package homeworkPackage;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 //Read a line of text such as “I love Java.  You love Java. She loves Java.” or any other text.
@@ -8,7 +7,7 @@ import java.util.Scanner;
 //        Count number of times each word (excluding dot .) occurs
 //        So the end result is something like following:
 
-public class MainHomework_Monday_3_27_23 {//class beg
+public class mainHomework_Monday_3_27_23 {//class beg
     String convertNumericToNumberByName;
 
 
