@@ -86,7 +86,7 @@ public class CustomerA
         addressA.setCityA("NiceCity");
         addressA.setStateA("OH");
 
-        //use to get values for address 2 in customer class
+//        //use to get values for address 2 in customer class
 //        addressA.getIsPrimaryAddressA();
 //        addressA.getStreetNumberA();
 //        addressA.getStreetNameA();

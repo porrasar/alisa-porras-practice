@@ -32,7 +32,7 @@ public class MainHomeworkA
                 "How You Do Ave.", "NiceCity", "OH");
 
         AddressA address2A = new AddressA();
-        //use to set values for address 2 in main class
+//        //use to set values for address 2 in main class
 //        address2A.setIsPrimaryAddressA(true);
 //        address2A.setStreetNumberA(7544);
 //        address2A.setStreetNameA("I Am Fine Dr.");
