@@ -12,6 +12,12 @@ public class AddressA
 
 
     //----------------------------CONSTRUCTORS --------------------------------------------
+
+    public AddressA()
+    {
+
+    }
+
     public AddressA(boolean isPrimaryAddressA, int streetNumberA, String streetNameA,
                      String cityA, String stateA)
     {

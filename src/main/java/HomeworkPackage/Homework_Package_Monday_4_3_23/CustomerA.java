@@ -15,6 +15,10 @@ public class CustomerA
 
     //----------------------------CONSTRUCTORS --------------------------------------------
 
+    public CustomerA()
+    {//constructor with no arguments
+
+    }
     public CustomerA(String customerNameA, String emailA,
                      ProductA [] purchasedProductA)
     {//constructor with 3 arguments: customer name, address, email, purchased product
@@ -72,6 +76,25 @@ public class CustomerA
         this.customerAddressA = customerAddressA;
     }
 
+
+    //-------Adding an address to array-----------------
+    public void addAddressA(AddressA addressA)
+    {
+        addressA.setIsPrimaryAddressA(true);
+        addressA.setStreetNumberA(7544);
+        addressA.setStreetNameA("I Am Fine Dr.");
+        addressA.setCityA("NiceCity");
+        addressA.setStateA("OH");
+
+        //use to get values for address 2 in customer class
+//        addressA.getIsPrimaryAddressA();
+//        addressA.getStreetNumberA();
+//        addressA.getStreetNameA();
+//        addressA.getCityA();
+//        addressA.getStateA();
+
+
+    }
     //----------GET AND PRINT Customer Info. and product(s) purchased-----------------
 
     public void getCustomerInfoA()
@@ -79,12 +102,10 @@ public class CustomerA
         System.out.println("Customer: " + customerNameA);
         System.out.println("Email: " + emailA);
 
-        for (AddressA customerAddressMadeUpAddressA : customerAddressA)
+       for (AddressA customerAddressMadeUpAddressA : customerAddressA)
         {
-            System.out.println
-                    ("Primary Address?: " + customerAddressMadeUpAddressA.getIsPrimaryAddressA());
-            System.out.println
-                    ("Customer Address: " + customerAddressMadeUpAddressA.getStreetNumberA()
+            System.out.println("Primary Address?: " + customerAddressMadeUpAddressA.getIsPrimaryAddressA());
+            System.out.println("Customer Address: " + customerAddressMadeUpAddressA.getStreetNumberA()
                       + " " + customerAddressMadeUpAddressA.getStreetNameA() + " "
                       + customerAddressMadeUpAddressA.getCityA() + " "
                       + customerAddressMadeUpAddressA.getStateA());
