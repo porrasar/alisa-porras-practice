@@ -1,5 +1,7 @@
 package homeworkPackage.homework_Package_Friday_3_31_23;
 
+import homeworkPackage.homework_Package_Friday_3_31_23.Product;
+
 public class Customer
 {//class beg
 
@@ -33,7 +35,8 @@ public class Customer
             {
                 break;
             }
-            result += ("\n" + " Product name: " + purchasedProduct[ii].getProductName());
+            result += ("\n" + " Product name: " + purchasedProduct[ii].getProductName()
+                    + "\n" + " Price $: " + purchasedProduct[ii].getPriceOfProduct());
          }
         return result;
 
