@@ -9,13 +9,17 @@ public class CustomerName
 
     //------------------------------CONSTRUCTOR ------------------------------------
 
+    public CustomerName()
+    {
+
+    }
+
     public CustomerName(String firstName, String middleName, String lastName)
     {
         this.firstName = firstName;
         this.middleName = middleName;
         this.lastName = lastName;
     }
-
     //------------------GETTER/SETTERS of variables----------------------------------
     public String getFirstName() {
         return firstName;
@@ -29,7 +33,8 @@ public class CustomerName
         return middleName;
     }
 
-    public void setMiddleName(String middleName) {
+    public void setMiddleName(String middleName)
+    {
         this.middleName = middleName;
     }
 
@@ -37,7 +42,8 @@ public class CustomerName
         return lastName;
     }
 
-    public void setLastName(String lastName) {
+    public void setLastName(String lastName)
+    {
         this.lastName = lastName;
     }
 }

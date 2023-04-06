@@ -23,23 +23,28 @@ public class Address
     }
 
     //------------------GETTER/SETTERS of variables----------------------------------
-    public boolean isPrimaryAddress() {
+    public boolean isPrimaryAddress()
+    {
         return isPrimaryAddress;
     }
 
-    public int getStreetNumber() {
+    public int getStreetNumber()
+    {
         return streetNumber;
     }
 
-    public String getStreetName() {
+    public String getStreetName()
+    {
         return streetName;
     }
 
-    public String getCity() {
+    public String getCity()
+    {
         return city;
     }
 
-    public String getState() {
+    public String getState()
+    {
         return state;
     }
 

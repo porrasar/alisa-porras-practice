@@ -1,29 +1,21 @@
 package homeworkPackage.homework_Package_Wednesday_4_5_23;
 
-import homeworkPackage.homework_Package_Monday_4_3_23.Customer;
-import homeworkPackage.homework_Package_Monday_4_3_23.Product;
-import homeworkPackage.homework_Package_Monday_4_3_23.address_sub_package.Address;
+
+import homeworkPackage.homework_Package_Wednesday_4_5_23.address_sub_package.Address;
 
 public class MainHomework
 {//class beg
 
 //-------------------------------REQUIREMENTS------------------------------------------
 
-//Remove existing “address” field (and its getter and setter) from the Customer class
-//Create “Address” class with the following fields:
-//boolean isPrimaryAddress
-//streetNumber
-//streetName
-//city
-//state
-//Add “Address[]” field to the “Customer” class
-//The “Address” class should be in a sub-package
-//Add “addAddress(Address address)” method to the “Customer” class
-//Think about how you are going to keep track of the next available Address slot in the Address[] array of the Customer object
-//Modify “getCustomerInfo” method to display the addresses of the customer as well
-//In the “main” method of the “MainHomeworkMarch31st” class, please add a new address to a “Customer” object using “addAddress(Address address)” method
-
-
+    /*
+Remove existing “customerName” field (and its getter and setter) from the Customer class
+Create “CustomerName” class with the following fields:
+firstName
+middleName
+lastName
+Refactor affected code accordingly
+*/
 
     //------------------------------DEFINING VARIABLES/FIELDS----------------------
     public static void main(String[] args)
@@ -34,14 +26,11 @@ public class MainHomework
        //------------customer object
 
         Customer customer = new Customer();
-        customer.setCustomerName("Suzy Lynn q");
         customer.setEmail("suzyq@yahoo.com");
 
         CustomerName customerName = new CustomerName
                 ("Suzy", "Tammy", "Q");
-//          customer.setCustomerName(customerName.getFirstName());
-//          customer.setCustomerName(customerName.getMiddleName());
-//          customer.setCustomerName(customerName.getLastName());
+        customer.setCustomerName(customerName);
 
 
         //------------product array object
@@ -67,8 +56,7 @@ public class MainHomework
 
         //call getCustomerInfo method to get customer info and then print it out
         String customerInfo = customer.getCustomerInfo();
-        System.out.println("TESTING WHY NOT CALLING GETCUSTOMERINFO: "
-               + "\n" + customerInfo);
+        System.out.println("\n" + customerInfo);
 
 
     }//main end

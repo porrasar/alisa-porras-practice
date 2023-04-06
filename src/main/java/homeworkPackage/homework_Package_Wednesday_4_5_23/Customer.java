@@ -1,12 +1,14 @@
 package homeworkPackage.homework_Package_Wednesday_4_5_23;
 
-import homeworkPackage.homework_Package_Monday_4_3_23.Product;
-import homeworkPackage.homework_Package_Monday_4_3_23.address_sub_package.Address;
+
+import homeworkPackage.homework_Package_Wednesday_4_5_23.address_sub_package.Address;
 
 public class Customer
 {//class beg
 
     //------------------------------DEFINING VARIABLES/FIELDS----------------------
+
+    private CustomerName customerName;
     private String email;
     private Product[] products;
     private Address[] addresses;
@@ -18,6 +20,14 @@ public class Customer
 
     }
 
+    public Customer(CustomerName customerName, String email, Product[] products, Address[] addresses, int currentAddressIndex) {
+        this.customerName = customerName;
+        this.email = email;
+        this.products = products;
+        this.addresses = addresses;
+        this.currentAddressIndex = currentAddressIndex;
+    }
+
     //--------------------------BASIC LOGIC----------------------------------------
     //  load the variable value into address array & add 1 to array index
     public void addAddress(Address address)
@@ -25,35 +35,37 @@ public class Customer
         addresses[currentAddressIndex++] = address;
     }
 
+
     // use for loop to go thru arrays and send/return info/result back to main class
     public String getCustomerInfo()
     {
-        System.out.println("in getcustomerinfo" );
-//        String result = "CustomerName: hey" ;
+        String result = "First Name: " + customerName.getFirstName()
+                +  " " + "Middle Name: " + customerName.getMiddleName()
+                +  " " + "Last Name: " + customerName.getLastName()
+                + "\n" + "Email: " + email;
 
-//        String result = "CustomerName: " + customerName +
-//                 " " + "\n" + "Email: " + email;
-
-      String result = "\n" + "Email: " + email;
-
-        for (int ii = 0; ii < products.length; ii++) {
+        for (int ii = 0; ii < products.length; ii++)
+        {
             if (products[ii] == null) {
                 break;
             }
             result += "\n"
-                    + "  Product shame: "
+                    + "  Product Name: "
                     + products[ii].getProductName()
                     + "Price: $ "
                     + products[ii].getPrice();
+
         }
 
-        for (int ii = 0; ii < addresses.length; ii++) {
+        for (int ii = 0; ii < addresses.length; ii++)
+        {
             if (addresses[ii] == null) {
                 break;
             }
             result += "\n"
                     + "  Address: "
                     + addresses[ii].getStreetNumber() + " "
+                    + addresses[ii].getStreetName() + " "
                     + addresses[ii].getCity() + " ";
         }
 
@@ -87,5 +99,13 @@ public class Customer
         this.addresses = addresses;
     }
 
+    public CustomerName getCustomerName()
+    {
+        return customerName;
+    }
 
+    public void setCustomerName(CustomerName customerName)
+    {
+        this.customerName = customerName;
+    }
 }//class end
