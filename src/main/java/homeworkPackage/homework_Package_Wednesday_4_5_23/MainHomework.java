@@ -32,9 +32,17 @@ public class MainHomework
 
        //------------creating object instances and setting the variable-----------------
        //------------customer object
+
         Customer customer = new Customer();
         customer.setCustomerName("Suzy Lynn q");
         customer.setEmail("suzyq@yahoo.com");
+
+        CustomerName customerName = new CustomerName
+                ("Suzy", "Tammy", "Q");
+//          customer.setCustomerName(customerName.getFirstName());
+//          customer.setCustomerName(customerName.getMiddleName());
+//          customer.setCustomerName(customerName.getLastName());
+
 
         //------------product array object
         Product[] products = new Product[10];
@@ -58,7 +66,6 @@ public class MainHomework
 
 
         //call getCustomerInfo method to get customer info and then print it out
-
         String customerInfo = customer.getCustomerInfo();
         System.out.println("TESTING WHY NOT CALLING GETCUSTOMERINFO: "
                + "\n" + customerInfo);

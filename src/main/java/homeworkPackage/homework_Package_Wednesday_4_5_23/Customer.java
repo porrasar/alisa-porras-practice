@@ -29,10 +29,12 @@ public class Customer
     public String getCustomerInfo()
     {
         System.out.println("in getcustomerinfo" );
-        String result = "CustomerName: hey" ;
+//        String result = "CustomerName: hey" ;
 
 //        String result = "CustomerName: " + customerName +
 //                 " " + "\n" + "Email: " + email;
+
+      String result = "\n" + "Email: " + email;
 
         for (int ii = 0; ii < products.length; ii++) {
             if (products[ii] == null) {
