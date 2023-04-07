@@ -39,9 +39,9 @@ public class Customer
     // use for loop to go thru arrays and send/return info/result back to main class
     public String getCustomerInfo()
     {
-        String result = "First Name: " + customerName.getFirstName()
-                +  " " + "Middle Name: " + customerName.getMiddleName()
-                +  " " + "Last Name: " + customerName.getLastName()
+        String result = "Customer Name:  " + customerName.getFirstName()
+                +  " "  + customerName.getMiddleName()
+                +  " "  + customerName.getLastName()
                 + "\n" + "Email: " + email;
 
         for (int ii = 0; ii < products.length; ii++)
