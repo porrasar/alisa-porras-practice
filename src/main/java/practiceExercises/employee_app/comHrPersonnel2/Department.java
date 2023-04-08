@@ -1,4 +1,4 @@
-package practiceExercises.employee_app.comHrPersonnel;
+package practiceExercises.employee_app.comHrPersonnel2;
 
 public class Department
 {
@@ -22,19 +22,8 @@ public class Department
         this.currentIndex = currentIndex;
     }
 
-    //-------------------------BUSINESS LOGIC---------------------------------
+    //-------------------------BUSINESS LOGIC---------------------
 
-    //------------OBJECT instances created
-
-    //---------Salaried object
-    SalariedEmployee salariedEmployee1 = new SalariedEmployee();
-    SalariedEmployee salariedEmployee2 = new SalariedEmployee();
-
-    //------Hourly Employee object over-ridding Employee object
-    Employee hourlyEmployee1 = new HourlyEmployee();
-
-
-    //-----------General Methods
     public void addEmployee (Employee employee)
     {
         for (int i = 0; i <= currentIndex; ++i)

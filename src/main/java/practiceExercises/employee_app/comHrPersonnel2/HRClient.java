@@ -1,4 +1,4 @@
-package practiceExercises.employee_app.comHrPersonnel;
+package practiceExercises.employee_app.comHrPersonnel2;
 
 import java.time.LocalDate;
 
@@ -15,13 +15,13 @@ public class HRClient
         Employee employee2 = new Employee("Kim",
                 LocalDate.of(2020,11,15));
 
-//        //---------Salaried object
-//        SalariedEmployee salariedEmployee1 = new SalariedEmployee();
-//        SalariedEmployee salariedEmployee2 = new SalariedEmployee();
-//
-//        //------Hourly Employee object over-ridding Employee object
-//        Employee hourlyEmployee1 = new HourlyEmployee();
-//        //HourlyEmployee hourlyEmployee1 = new HourlyEmployee();
+        //---------Salaried object
+        SalariedEmployee salariedEmployee1 = new SalariedEmployee();
+        SalariedEmployee salariedEmployee2 = new SalariedEmployee();
+
+        //------Hourly Employee object over-ridding Employee object
+        Employee hourlyEmployee1 = new HourlyEmployee();
+        //HourlyEmployee hourlyEmployee1 = new HourlyEmployee();
 
         //---------Department object
         Department department = new Department();
