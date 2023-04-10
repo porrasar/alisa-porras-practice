@@ -18,7 +18,7 @@ public class HourlyEmployee extends Employee
         this.hourlyRate = hourlyRate;
     }
 
-    //-------------------------BUSINESS LOGIC---------------------
+    //-----------------BUSINESS LOGIC/GENERAL METHODS---------------------
 
 
     //-------------------------GETTER/SETTERS----------------------

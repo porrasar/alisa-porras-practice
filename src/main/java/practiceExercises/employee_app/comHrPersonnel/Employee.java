@@ -1,6 +1,7 @@
 package practiceExercises.employee_app.comHrPersonnel;
 
 import java.time.LocalDate;
+import java.time.Year;
 
 public class Employee
 {//class beg
@@ -17,28 +18,32 @@ public class Employee
     {
         this.name = name;
         this.hireDate = hireDate;
+
     }
-    //-------------------------BUSINESS LOGIC---------------------
+    //-----------------BUSINESS LOGIC/GENERAL METHODS---------------------
+
     public String getEmployeeInfo()
     {
         String employeeInfo = ("name = " + name + ", hireDate = " + hireDate);
         return employeeInfo;
     }
     public String work()
-    {
+     {
         String workMessage = name +  " worked.";
         return workMessage;
     }
 
     public int computeNumberOfYearsWorkedSinceHired()
     {
-       int currentYear = 2023;
-       int hiredYear = 2015;
+        int currentYear = Year.now().getValue();
 
+        LocalDate employeeHireDate = getHireDate();
+        int yearHired = employeeHireDate.getYear();
 
-        numberOfYearsWorked =  currentYear - hiredYear;
+        numberOfYearsWorked =  currentYear - yearHired;
         return numberOfYearsWorked;
     }
+
 
     //-------------------------GETTER/SETTERS----------------------
 

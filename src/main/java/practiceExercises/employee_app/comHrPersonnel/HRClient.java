@@ -5,48 +5,71 @@ import java.time.LocalDate;
 public class HRClient
 {//class beg
     public static void main(String[] args)
-    {
+    {//main beg
         //------------OBJECT INSTANCES CREATED-----------------------------
-
-        //---------Employee object
-        Employee employee1 = new Employee
-                ("Mike",
-                        LocalDate.of(2022,12,25));
-        Employee employee2 = new Employee("Kim",
-                LocalDate.of(2020,11,15));
-
-//        //---------Salaried object
-//        SalariedEmployee salariedEmployee1 = new SalariedEmployee();
-//        SalariedEmployee salariedEmployee2 = new SalariedEmployee();
-//
-//        //------Hourly Employee object over-ridding Employee object
-//        Employee hourlyEmployee1 = new HourlyEmployee();
-//        //HourlyEmployee hourlyEmployee1 = new HourlyEmployee();
 
         //---------Department object
         Department department = new Department();
 
-        //-------------------------BUSINESS LOGIC-------------------
-        String employeeInfo1 = employee1.getEmployeeInfo();
-        String employeeWorked1 = employee1.work();
-        System.out.println(employeeInfo1);
-        System.out.println(employeeWorked1);
+        //---------Employee array object and employee object
+        Employee[] employees = new Employee[100];
+        department.setEmployees(employees);
+
+        Employee employee1 = new Employee ("Mike",
+                        LocalDate.of(2022,12,25));
+        department.addEmployee(employee1);  //moving data into table
+
+        Employee employee2 = new Employee("Kim",
+                LocalDate.of(2020,11,15));
+        department.addEmployee(employee2);  //moving data into table
+
+        Employee employee3 = new Employee("Roger ",
+                LocalDate.of(2015,10,22));
+        department.addEmployee(employee3);  //moving data into table
+
+
+
+        //-----------------BUSINESS LOGIC/GENERAL METHODS---------------------
+
         int employeeWorked = 0;
-        employeeWorked = employeeWorked + 1;
 
-//        String employeeInfo2 = employee2.getEmployeeInfo();
-//        String employeeWorked2 = employee2.work();
-//        System.out.println(employeeInfo2);
-//        System.out.println(employeeWorked2);
+        for (int i = 0; i < employees.length; i++)
+        {//for beg
 
-        int numberOfYearsWorked =
-                employee1.computeNumberOfYearsWorkedSinceHired();
-        System.out.println("Number of Years Worked: " + numberOfYearsWorked);
+            if (employees[i] == null)
+            {
+                break;
+            }
+            //getting name and hire date
+            String employeeInfo = employees[i].getEmployeeInfo();
 
 
-        department.addEmployee(employee1);
-        department.letEmployeesWorkAndReturnNumberOfEmployeesWhoWorked(employeeWorked);
+            //getting if employee worked
+            String workedMessage = employees[i].work();
+            if (workedMessage.contains("worked"))
+            {//work message for loop beg
+                employeeWorked =
+                department.letEmployeesWorkAndReturnNumberOfEmployeesWhoWorked
+                        (employeeWorked);
+            }//work message for loop end
+
+
+            //getting number of years employee worked
+            int numberOfYearsWorked =
+                     employees[i].computeNumberOfYearsWorkedSinceHired();
+
+
+            //---------------------
+            //PRINTING out all info gathered about employee
+            System.out.println("Employee: " + employeeInfo);
+            System.out.println("Employee work message: " + workedMessage);
+            System.out.println("Number of Years Worked: " + numberOfYearsWorked);
+            System.out.println(" ");
+
+        }//for end
+
         System.out.println("Number of Employees that worked: " + employeeWorked);
 
-    }
+
+    }//main end
 }//class end

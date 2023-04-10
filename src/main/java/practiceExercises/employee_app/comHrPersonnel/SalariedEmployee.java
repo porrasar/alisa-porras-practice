@@ -14,7 +14,7 @@ public class SalariedEmployee extends Employee
         this.monthlySalary = monthlySalary;
     }
 
-    //-------------------------BUSINESS LOGIC---------------------
+    //-----------------BUSINESS LOGIC/GENERAL METHODS---------------------
 
 
     //-------------------------GETTER/SETTERS----------------------
