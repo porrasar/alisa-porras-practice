@@ -31,7 +31,7 @@ public class HRClient
         department.addEmployee(employee3);  //moving data into table
 
 
-        //---This is part of polymorphism: creating employee(salaried employee),
+        //---this sThis is part of polymorphism: creating employee(salaried employee),
         // but using the sub class salaried employee's method
         Employee salariedEmployee1 = new SalariedEmployee(1000.00);
         Employee salariedEmployee2 = new SalariedEmployee(1700.00);
