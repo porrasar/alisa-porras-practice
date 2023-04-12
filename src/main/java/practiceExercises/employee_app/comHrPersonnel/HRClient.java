@@ -32,13 +32,14 @@ public class HRClient
 
 
         //---This is part of polymorphism: creating employee(salaried employee),
-        // but using salaried employee's method
+        // but using the sub class salaried employee's method
         Employee salariedEmployee1 = new SalariedEmployee(1000.00);
         Employee salariedEmployee2 = new SalariedEmployee(1700.00);
 
         //---This is part of polymorphism: creating employee(hourly employee),
-        // but using hourly employee's method
-        Employee hourlyEmployee1 = new HourlyEmployee(160,21.00);
+        // but using the sub class hourly employee's method
+        Employee hourlyEmployee1 = new HourlyEmployee
+                               (160,21.00);
 
 
 
@@ -89,8 +90,24 @@ public class HRClient
 
 
         System.out.println("Number of Employees that worked: " + employeeWorked);
-//      System.out.println("Total Monthly Salary of all employees: "
-//                + totalMonthlySalary);
+        System.out.println(" ");
+
+        double totalMonthlySalary = salariedEmployee1.computeMonthlyCompensation();
+        System.out.println("Total Monthly Salary of employee 1: $"
+                + salariedEmployee1.computeMonthlyCompensation());
+
+        totalMonthlySalary = totalMonthlySalary
+                + salariedEmployee2.computeMonthlyCompensation();
+        System.out.println("Total Monthly Salary of employee 2: $"
+                + salariedEmployee2.computeMonthlyCompensation());
+
+        totalMonthlySalary = totalMonthlySalary
+                + hourlyEmployee1.computeMonthlyCompensation();
+        System.out.println("Total Monthly Salary of employee 3: $"
+                + hourlyEmployee1.computeMonthlyCompensation());
+
+        System.out.println("Total Monthly Salary of ALL employees: $"
+                + totalMonthlySalary);
 
 
 
