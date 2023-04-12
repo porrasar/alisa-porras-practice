@@ -17,21 +17,36 @@ public class HRClient
 
         Employee employee1 = new Employee ("Mike",
                         LocalDate.of(2022,12,25));
+
         department.addEmployee(employee1);  //moving data into table
 
         Employee employee2 = new Employee("Kim",
                 LocalDate.of(2020,11,15));
+
         department.addEmployee(employee2);  //moving data into table
 
         Employee employee3 = new Employee("Roger ",
                 LocalDate.of(2015,10,22));
+
         department.addEmployee(employee3);  //moving data into table
+
+
+        //---This is part of polymorphism: creating employee(salaried employee),
+        // but using salaried employee's method
+        Employee salariedEmployee1 = new SalariedEmployee(1000.00);
+        Employee salariedEmployee2 = new SalariedEmployee(1700.00);
+
+        //---This is part of polymorphism: creating employee(hourly employee),
+        // but using hourly employee's method
+        Employee hourlyEmployee1 = new HourlyEmployee(160,21.00);
 
 
 
         //-----------------BUSINESS LOGIC/GENERAL METHODS---------------------
 
         int employeeWorked = 0;
+        double totalDepartmentMonthlySalary = 0.0;
+
 
         for (int i = 0; i < employees.length; i++)
         {//for beg
@@ -51,6 +66,10 @@ public class HRClient
                 employeeWorked =
                 department.letEmployeesWorkAndReturnNumberOfEmployeesWhoWorked
                         (employeeWorked);
+              totalDepartmentMonthlySalary =
+                        department.computeDepartmentMonthlyTotalCompensation
+                                (totalDepartmentMonthlySalary);
+
             }//work message for loop end
 
 
@@ -64,11 +83,16 @@ public class HRClient
             System.out.println("Employee: " + employeeInfo);
             System.out.println("Employee work message: " + workedMessage);
             System.out.println("Number of Years Worked: " + numberOfYearsWorked);
-            System.out.println(" ");
+             System.out.println(" ");
 
         }//for end
 
+
         System.out.println("Number of Employees that worked: " + employeeWorked);
+//      System.out.println("Total Monthly Salary of all employees: "
+//                + totalMonthlySalary);
+
+
 
 
     }//main end

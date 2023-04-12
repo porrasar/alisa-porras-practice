@@ -21,6 +21,14 @@ public class HourlyEmployee extends Employee
     //-----------------BUSINESS LOGIC/GENERAL METHODS---------------------
 
 
+    //---This is part of polymorphism: overriding the employee's class
+    // computeMonthlyCompensation method
+    @Override
+    public double computeMonthlyCompensation()
+    {
+        return hourlyRate * hoursWorkedPerMonth;
+    }
+
     //-------------------------GETTER/SETTERS----------------------
     public int getHoursWorkedPerMonth()
     {

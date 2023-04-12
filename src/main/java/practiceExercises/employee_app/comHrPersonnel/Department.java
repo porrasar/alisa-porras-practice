@@ -25,15 +25,17 @@ public class Department
     }
 //------------------------------OBJECT INSTANCES CREATED -------------------------------------
 
-    //---------Salaried object
-    SalariedEmployee salariedEmployee1 = new SalariedEmployee(1500.00);
-    SalariedEmployee salariedEmployee2 = new SalariedEmployee(1700.00);
-
-    //------Hourly Employee object over-ridding Employee object
-    Employee hourlyEmployee1 = new HourlyEmployee(160,21.00);
+//    //---------Salaried object
+//    SalariedEmployee salariedEmployee1 = new SalariedEmployee(1000.00);
+//    SalariedEmployee salariedEmployee2 = new SalariedEmployee(1700.00);
+//
+//    //------Hourly Employee object over-ridding Employee object
+//    Employee hourlyEmployee1 = new HourlyEmployee(160,21.00);
 
 
     //-----------------BUSINESS LOGIC/GENERAL METHODS---------------------
+
+
 
     //-----------General Methods
     public void addEmployee (Employee employee)
@@ -46,6 +48,16 @@ public class Department
     {
        employeeWorked++;
        return employeeWorked;
+    }
+
+    //      Compute total monthly compensation of all employees in that department
+    public double computeDepartmentMonthlyTotalCompensation
+                                   (double totalDepartmentMonthlySalary)
+    {
+//
+//        totalMonthlySalary = totalMonthlySalary +
+//                salariedEmployee1.getMonthlySalary();
+        return 0.0;
     }
 
     //-------------------------GETTER/SETTERS----------------------

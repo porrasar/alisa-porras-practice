@@ -8,7 +8,11 @@ public class Employee
     //-------------------------DEFINE VARIABLES----------------------
     private String name;
     private LocalDate hireDate;
+
+
+
     private int numberOfYearsWorked;
+    //private double monthlySalary;
     //-------------------------CONSTRUCTORS----------------------
     public Employee()
     {
@@ -20,11 +24,20 @@ public class Employee
         this.hireDate = hireDate;
 
     }
+
+//    public Employee(String name, LocalDate hireDate, double monthlySalary)
+//    {
+//        this.name = name;
+//        this.hireDate = hireDate;
+//        this.monthlySalary = monthlySalary;
+//    }
+
     //-----------------BUSINESS LOGIC/GENERAL METHODS---------------------
 
     public String getEmployeeInfo()
     {
         String employeeInfo = ("name = " + name + ", hireDate = " + hireDate);
+//                                   + ",  monthly salary: $" + monthlySalary);
         return employeeInfo;
     }
     public String work()
@@ -44,6 +57,10 @@ public class Employee
         return numberOfYearsWorked;
     }
 
+    public double computeMonthlyCompensation()
+    {
+       return 7.2;
+    }
 
     //-------------------------GETTER/SETTERS----------------------
 
@@ -64,5 +81,11 @@ public class Employee
         this.hireDate = hireDate;
     }
 
-
+//    public double getMonthlySalary() {
+//        return monthlySalary;
+//    }
+//
+//    public void setMonthlySalary(double monthlySalary) {
+//        this.monthlySalary = monthlySalary;
+//    }
 }//class end
