@@ -12,7 +12,8 @@ public class Employee
 
 
     private int numberOfYearsWorked;
-    //private double monthlySalary;
+    private double monthlySalary;
+
     //-------------------------CONSTRUCTORS----------------------
     public Employee()
     {
