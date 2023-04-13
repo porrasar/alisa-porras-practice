@@ -2,10 +2,9 @@ package practiceExercises.employee_app.comHrPersonnel;
 
 import java.time.LocalDate;
 
-public class HRClient
-{//class beg
-    public static void main(String[] args)
-    {//main beg
+public class HRClient {//class beg
+
+    public static void main(String[] args) {//main beg
         //------------OBJECT INSTANCES CREATED-----------------------------
 
         //---------Department object
@@ -30,7 +29,7 @@ public class HRClient
 //        department.addEmployee(employee2);  //moving data into table
 
         Employee employee3 = new HourlyEmployee("Roger ",
-                LocalDate.of(2015,10,22),
+                LocalDate.of(2015, 10, 22),
                 160, 21.00);
         department.addEmployee(employee3);  //moving data into table
 
@@ -42,48 +41,39 @@ public class HRClient
         String employeeInfo = null;
 
 
-        for (int i = 0; i < employees.length; i++)
-        {//for beg
+        for (int i = 0; i < employees.length; i++) {//for beg
 
-            if (employees[i] == null)
-            {
+            if (employees[i] == null) {
                 break;
             }
             //getting name and hire date
             //String employeeInfo = employees[i].getEmployeeInfo();
 
 
-
             //getting if employee worked
             String workedMessage = employees[i].work();
-            if (workedMessage.contains("worked"))
-            {//work message for loop beg
+            if (workedMessage.contains("worked")) {//work message for loop beg
                 employeeWorked =
-                department.letEmployeesWorkAndReturnNumberOfEmployeesWhoWorked
-                        (employeeWorked);
+                        department.letEmployeesWorkAndReturnNumberOfEmployeesWhoWorked
+                                (employeeWorked);
 
-                if (employees[i] instanceof SalariedEmployee)
-                {
+                if (employees[i] instanceof SalariedEmployee) {
+                    employeeInfo = employees[i].getEmployeeInfo();
+                } else if (employees[i] instanceof HourlyEmployee) {
                     employeeInfo = employees[i].getEmployeeInfo();
                 }
-                else
-                if (employees[i] instanceof HourlyEmployee)
-                {
-                    employeeInfo = employees[i].getEmployeeInfo();
-                }
-
 
 
                 totalDepartmentMonthlySalary =
-                    department.computeDepartmentMonthlyTotalCompensation();
-              //                                (totalDepartmentMonthlySalary);
+                        department.computeDepartmentMonthlyTotalCompensation();
+                //                                (totalDepartmentMonthlySalary);
 
             }//work message for loop end
 
 
             //getting number of years employee worked
             int numberOfYearsWorked =
-                     employees[i].computeNumberOfYearsWorkedSinceHired();
+                    employees[i].computeNumberOfYearsWorkedSinceHired();
 
 
             //---------------------
@@ -91,7 +81,7 @@ public class HRClient
             System.out.println("Employee: " + employeeInfo);
             System.out.println("Employee work message: " + workedMessage);
             System.out.println("Number of Years Worked: " + numberOfYearsWorked);
-             System.out.println(" ");
+            System.out.println(" ");
 
         }//for end
 
@@ -117,7 +107,7 @@ public class HRClient
 //                + totalMonthlySalary);
 
         System.out.println("Total Monthly Salary of ALL employees: $"
-                        + totalDepartmentMonthlySalary);
+                + totalDepartmentMonthlySalary);
 
 
     }//main end
