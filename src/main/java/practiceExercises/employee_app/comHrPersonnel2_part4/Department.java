@@ -1,4 +1,4 @@
-package practiceExercises.employee_app.comHrPersonnel;
+package practiceExercises.employee_app.comHrPersonnel2_part4;
 
 public class Department
 {
@@ -27,7 +27,18 @@ public class Department
 
 
 
-//---------------------------BUSINESS LOGIC/GENERAL METHODS---------------------
+    //-----------------BUSINESS LOGIC/GENERAL METHODS---------------------
+    //---This is part of polymorphism: creating employee(salaried employee),
+        // but using the sub class salaried employee's method
+        SalariedEmployee salariedEmployee1 = new SalariedEmployee(1000.00);
+        SalariedEmployee salariedEmployee2 = new SalariedEmployee(1700.00);
+
+        //---This is part of polymorphism: creating employee(hourly employee),
+        // but using the sub class hourly employee's method
+        HourlyEmployee hourlyEmployee1 = new HourlyEmployee
+                               (160,21.00);
+
+
     //-----------General Methods
     public void addEmployee (Employee employee)
     {

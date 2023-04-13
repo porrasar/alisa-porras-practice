@@ -1,5 +1,7 @@
 package practiceExercises.employee_app.comHrPersonnel;
 
+import java.time.LocalDate;
+
 public class HourlyEmployee extends Employee
 {
     //-------------------------DEFINE VARIABLES----------------------
@@ -18,8 +20,17 @@ public class HourlyEmployee extends Employee
         this.hourlyRate = hourlyRate;
     }
 
-    //-----------------BUSINESS LOGIC/GENERAL METHODS---------------------
+    public HourlyEmployee(String name, LocalDate hireDate, int hoursWorkedPerMonth, double hourlyRate) {
+        //calling my employee constructor for the parent's fields
+        super(name, hireDate);
+        //using the subclass (hourlyemployee) constructor for it's fields
+        this.hoursWorkedPerMonth = hoursWorkedPerMonth;
+        this.hourlyRate = hourlyRate;
+    }
+//-----------------BUSINESS LOGIC/GENERAL METHODS---------------------
 
+
+    HourlyEmployee hourlyEmployee1 = new HourlyEmployee();
 
     //---This is part of polymorphism: overriding the employee's class
     // computeMonthlyCompensation method
@@ -28,6 +39,16 @@ public class HourlyEmployee extends Employee
     {
 
         return hourlyRate * hoursWorkedPerMonth;
+    }
+
+    @Override
+    public String getEmployeeInfo()
+    {
+        String employeeInfo = ("name = " + name + ", hireDate = " + hireDate
+        + "Hourly Rate: " + hourlyRate + "Monthly Hours: " + hoursWorkedPerMonth);
+        return employeeInfo;
+
+//                                   + ",  monthly salary: $" + monthlySalary);
     }
 
     //-------------------------GETTER/SETTERS----------------------

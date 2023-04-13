@@ -3,16 +3,14 @@ package practiceExercises.employee_app.comHrPersonnel;
 import java.time.LocalDate;
 import java.time.Year;
 
-public class Employee
+public abstract class Employee
 {//class beg
     //-------------------------DEFINE VARIABLES----------------------
-    private String name;
-    private LocalDate hireDate;
+    String name;
+    LocalDate hireDate;
 
+    int numberOfYearsWorked;
 
-
-    private int numberOfYearsWorked;
-    private double monthlySalary;
 
     //-------------------------CONSTRUCTORS----------------------
     public Employee()
@@ -26,21 +24,10 @@ public class Employee
 
     }
 
-//    public Employee(String name, LocalDate hireDate, double monthlySalary)
-//    {
-//        this.name = name;
-//        this.hireDate = hireDate;
-//        this.monthlySalary = monthlySalary;
-//    }
-
     //-----------------BUSINESS LOGIC/GENERAL METHODS---------------------
 
-    public String getEmployeeInfo()
-    {
-        String employeeInfo = ("name = " + name + ", hireDate = " + hireDate);
-//                                   + ",  monthly salary: $" + monthlySalary);
-        return employeeInfo;
-    }
+    public abstract String getEmployeeInfo();
+
     public String work()
      {
         String workMessage = name +  " worked.";
@@ -58,10 +45,8 @@ public class Employee
         return numberOfYearsWorked;
     }
 
-    public double computeMonthlyCompensation()
-    {
-       return 7.2;
-    }
+    public abstract double computeMonthlyCompensation();
+
 
     //-------------------------GETTER/SETTERS----------------------
 
@@ -82,11 +67,5 @@ public class Employee
         this.hireDate = hireDate;
     }
 
-//    public double getMonthlySalary() {
-//        return monthlySalary;
-//    }
-//
-//    public void setMonthlySalary(double monthlySalary) {
-//        this.monthlySalary = monthlySalary;
-//    }
+
 }//class end

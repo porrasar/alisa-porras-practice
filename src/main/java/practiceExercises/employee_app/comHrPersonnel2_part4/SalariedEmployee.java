@@ -1,4 +1,4 @@
-package practiceExercises.employee_app.comHrPersonnel2;
+package practiceExercises.employee_app.comHrPersonnel2_part4;
 
 public class SalariedEmployee extends Employee
 {
@@ -14,8 +14,15 @@ public class SalariedEmployee extends Employee
         this.monthlySalary = monthlySalary;
     }
 
-    //-------------------------BUSINESS LOGIC---------------------
+    //-----------------BUSINESS LOGIC/GENERAL METHODS---------------------
 
+    //---This is part of polymorphism: overriding the employee's class
+    // computeMonthlyCompensation method
+    @Override
+    public double computeMonthlyCompensation()
+    {
+        return monthlySalary;
+    }
 
     //-------------------------GETTER/SETTERS----------------------
     public double getMonthlySalary()
