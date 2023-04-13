@@ -1,5 +1,8 @@
 package practiceExercises.employee_app.comHrPersonnel;
 
+import practiceExercises.employee_app.comHrPersonnel2_part4.HourlyEmployee;
+import practiceExercises.employee_app.comHrPersonnel2_part4.SalariedEmployee;
+
 public class Department
 {
 
@@ -7,7 +10,7 @@ public class Department
 
     private String name;
     private String location;
-    private Employee[] employees;
+    private Employee[] employees = new Employee[100];
     private int currentEmployeeIndex = 0;
 
 
@@ -27,26 +30,49 @@ public class Department
 
 
 
-//---------------------------BUSINESS LOGIC/GENERAL METHODS---------------------
+    //-----------------BUSINESS LOGIC/GENERAL METHODS---------------------
+
     //-----------General Methods
     public void addEmployee (Employee employee)
     {
-         employees[currentEmployeeIndex]  = employee;
-         currentEmployeeIndex++;
+        employees[currentEmployeeIndex]  = employee;
+        currentEmployeeIndex++;
     }
 
-    public int letEmployeesWorkAndReturnNumberOfEmployeesWhoWorked(int employeeWorked)
+    public int letEmployeesWorkAndReturnNumberOfEmployeesWhoWorked()
     {
-       employeeWorked++;
-       return employeeWorked;
+//
+        int employeeWorked = 0;
+
+        for (int i = 0; i < currentEmployeeIndex; i++)
+        {
+            if (employees[i].work().contains("worked"))
+            {
+                employeeWorked++;
+            }
+        }
+//        employeeWorked++;
+        return employeeWorked;
+
     }
 
     //      Compute total monthly compensation of all employees in that department
     public double computeDepartmentMonthlyTotalCompensation()
-//                                   (double totalDepartmentMonthlySalary)
     {
+        double monthlyTotalCompensation = 0.0;
 
-        return 7.2;
+        for (int i = 0; i <currentEmployeeIndex ; i++)
+        {
+            monthlyTotalCompensation =
+            employees[i].computeMonthlyCompensation();
+
+            monthlyTotalCompensation += monthlyTotalCompensation;
+
+        }
+
+        return monthlyTotalCompensation;
+
+
     }
 
     //-------------------------GETTER/SETTERS----------------------

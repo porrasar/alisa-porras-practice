@@ -10,62 +10,46 @@ public class HourlyEmployee extends Employee
     private double hourlyRate;
 
     //-------------------------CONSTRUCTORS----------------------
-    public HourlyEmployee()
-    {
+    public HourlyEmployee() {
 
     }
-    public HourlyEmployee(int hoursWorkedPerMonth, double hourlyRate)
-    {
+
+    public HourlyEmployee(int hoursWorkedPerMonth, double hourlyRate) {
         this.hoursWorkedPerMonth = hoursWorkedPerMonth;
         this.hourlyRate = hourlyRate;
     }
 
-    public HourlyEmployee(String name, LocalDate hireDate, int hoursWorkedPerMonth, double hourlyRate) {
-        //calling my employee constructor for the parent's fields
+    public HourlyEmployee(String name, LocalDate hireDate, int hoursWorkedPerMonth, double hourlyRate)
+    {
         super(name, hireDate);
-        //using the subclass (hourlyemployee) constructor for it's fields
         this.hoursWorkedPerMonth = hoursWorkedPerMonth;
         this.hourlyRate = hourlyRate;
     }
 //-----------------BUSINESS LOGIC/GENERAL METHODS---------------------
 
 
-    HourlyEmployee hourlyEmployee1 = new HourlyEmployee();
-
     //---This is part of polymorphism: overriding the employee's class
     // computeMonthlyCompensation method
     @Override
-    public double computeMonthlyCompensation()
-    {
+    public double computeMonthlyCompensation() {
 
         return hourlyRate * hoursWorkedPerMonth;
     }
 
-    @Override
-    public String getEmployeeInfo()
-    {
-        String employeeInfo = ("name = " + name + ", hireDate = " + hireDate
-        + "Hourly Rate: " + hourlyRate + "Monthly Hours: " + hoursWorkedPerMonth);
-        return employeeInfo;
-
-//                                   + ",  monthly salary: $" + monthlySalary);
-    }
-
     //-------------------------GETTER/SETTERS----------------------
-    public int getHoursWorkedPerMonth()
-    {
+    public int getHoursWorkedPerMonth() {
         return hoursWorkedPerMonth;
     }
-    public void setHoursWorkedPerMonth(int hoursWorkedPerMonth)
-    {
+
+    public void setHoursWorkedPerMonth(int hoursWorkedPerMonth) {
         this.hoursWorkedPerMonth = hoursWorkedPerMonth;
     }
-    public double getHourlyRate()
-    {
+
+    public double getHourlyRate() {
         return hourlyRate;
     }
-    public void setHourlyRate(double hourlyRate)
-    {
+
+    public void setHourlyRate(double hourlyRate) {
         this.hourlyRate = hourlyRate;
     }
 }

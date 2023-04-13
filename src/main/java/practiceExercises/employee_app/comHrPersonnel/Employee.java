@@ -3,14 +3,13 @@ package practiceExercises.employee_app.comHrPersonnel;
 import java.time.LocalDate;
 import java.time.Year;
 
-public abstract class Employee
+public class Employee
 {//class beg
     //-------------------------DEFINE VARIABLES----------------------
-    String name;
-    LocalDate hireDate;
+    private String name;
+    private LocalDate hireDate;
 
-    int numberOfYearsWorked;
-
+    private int numberOfYearsWorked;
 
     //-------------------------CONSTRUCTORS----------------------
     public Employee()
@@ -26,12 +25,15 @@ public abstract class Employee
 
     //-----------------BUSINESS LOGIC/GENERAL METHODS---------------------
 
-    public abstract String getEmployeeInfo();
+    public String getEmployeeInfo()
+    {
+        String employeeInfo = ("name = " + name + ", hireDate = " + hireDate);
 
+        return employeeInfo;
+    }
     public String work()
-     {
-        String workMessage = name +  " worked.";
-        return workMessage;
+    {
+        return name +  " worked.";
     }
 
     public int computeNumberOfYearsWorkedSinceHired()
@@ -45,8 +47,10 @@ public abstract class Employee
         return numberOfYearsWorked;
     }
 
-    public abstract double computeMonthlyCompensation();
-
+    public double computeMonthlyCompensation()
+    {
+        return 0.0;
+    }
 
     //-------------------------GETTER/SETTERS----------------------
 
@@ -69,3 +73,4 @@ public abstract class Employee
 
 
 }//class end
+
