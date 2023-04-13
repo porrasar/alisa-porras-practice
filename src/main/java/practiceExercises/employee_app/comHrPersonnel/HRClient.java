@@ -49,7 +49,7 @@ public class HRClient
 
 
 //        int employeeWorked = 0;
-        double totalDepartmentMonthlySalary = 0.0;
+//        double totalDepartmentMonthlySalary = 0.0;
 
 
 //        for (int i = 0; i < employees.length; i++)
@@ -60,6 +60,7 @@ public class HRClient
 //                break;
 //            }
 //            //getting name and hire date
+
 //            String employeeInfo = employees[i].getEmployeeInfo();
 //
 //            //getting number of years employee worked
@@ -68,9 +69,9 @@ public class HRClient
             //---------------------
             //PRINTING out all info gathered about employee
 //            System.out.println("Employee: " + employeeInfo);
-            System.out.println("Employee work message: " + employeeWorked);
+//            System.out.println("Employee work message: " + employeeWorked);
 //            System.out.println("Number of Years Worked: " + numberOfYearsWorked);
-            System.out.println(" ");
+//            System.out.println(" ");
 
  //       }//for end
 
