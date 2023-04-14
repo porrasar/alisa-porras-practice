@@ -16,6 +16,7 @@ public class SearchElementsInArrayListExample
         names.add("Steve");
         names.add("Maria");
 
+
         // Check if an ArrayList contains a given element
         System.out.println("Does names array contain \"Bob\"? : " + names.contains("Bob"));
 
