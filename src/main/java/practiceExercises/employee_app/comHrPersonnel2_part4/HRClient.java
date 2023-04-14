@@ -24,6 +24,7 @@ public class HRClient
 //        HourlyEmployee hourlyEmployee1 = new HourlyEmployee("Roger ",
 //                LocalDate.of(2015,10,22),
 //                160, 21.00);
+        //
 
         Employee salariedEmployee1 = new SalariedEmployee("Mike",
                 LocalDate.of(2022,12,25),
