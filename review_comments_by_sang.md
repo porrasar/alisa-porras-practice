@@ -9,5 +9,9 @@ weekly 1-1.
 - There is a compile error in the
   homeworkPackage.homework_Package_Friday_3_31_23 package
   (I need to clean up the cache)
+
+## April 13 (Thursday)
+- Some logic errors are present
+- employee_app failed to run
   
 
