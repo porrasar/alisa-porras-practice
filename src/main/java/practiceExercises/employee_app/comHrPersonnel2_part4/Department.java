@@ -1,6 +1,5 @@
 package practiceExercises.employee_app.comHrPersonnel2_part4;
 
-import practiceExercises.employee_app.comHrPersonnel.Employee;
 
 public class Department
 {
@@ -9,25 +8,23 @@ public class Department
 
     private String name;
     private String location;
-    private Employee[] employees;
+    private Employee[] employees = new Employee[100];
     private int currentEmployeeIndex = 0;
 
-
     //-------------------------CONSTRUCTORS----------------------
-    public Department()
-    {
 
+    public Department(String name, String location) {
+        this.name = name;
+        this.location = location;
     }
     public Department(String name, String location, Employee[] employees, int currentEmployeeIndex) {
         this.name = name;
         this.location = location;
         this.employees = employees;
         this.currentEmployeeIndex = currentEmployeeIndex;
-
     }
+
 //------------------------------OBJECT INSTANCES CREATED -------------------------------------
-
-
 
     //-----------------BUSINESS LOGIC/GENERAL METHODS---------------------
 
@@ -37,10 +34,18 @@ public class Department
         employees[currentEmployeeIndex]  = employee;
         currentEmployeeIndex++;
     }
-
+    public Employee[] getEmployees()
+    {
+        for (int i = 0; i < currentEmployeeIndex; i++)
+        {
+            System.out.println(employees[i].getEmployeeInfo()
+              + " Number of years worked: "
+              + employees[i].computeNumberOfYearsWorkedSinceHired());
+        }
+        return employees;
+    }
     public int letEmployeesWorkAndReturnNumberOfEmployeesWhoWorked()
     {
-//
         int employeeWorked = 0;
 
         for (int i = 0; i < currentEmployeeIndex; i++)
@@ -50,9 +55,7 @@ public class Department
                 employeeWorked++;
             }
         }
-//        employeeWorked++;
         return employeeWorked;
-
     }
 
     //      Compute total monthly compensation of all employees in that department
@@ -66,37 +69,33 @@ public class Department
                     employees[i].computeMonthlyCompensation();
 
             monthlyTotalCompensation += monthlyTotalCompensation;
-
         }
-
         return monthlyTotalCompensation;
-
-
     }
 
     //-------------------------GETTER/SETTERS----------------------
-
-    public String getName() {
+    public String getName()
+    {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(String name)
+    {
         this.name = name;
     }
 
-    public String getLocation() {
+    public String getLocation()
+    {
         return location;
     }
 
-    public void setLocation(String location) {
+    public void setLocation(String location)
+    {
         this.location = location;
     }
 
-    public Employee[] getEmployees() {
-        return employees;
-    }
-
-    public void setEmployees(Employee[] employees) {
+    public void setEmployees(Employee[] employees)
+    {
         this.employees = employees;
     }
 
@@ -105,93 +104,11 @@ public class Department
         return currentEmployeeIndex;
     }
 
-    public void setCurrentIndex(int currentIndex) {
+    public void setCurrentIndex(int currentIndex)
+    {
         this.currentEmployeeIndex = currentIndex;
     }
 }
 
 
-//
-//    //-------------------------DEFINE VARIABLES----------------------
-//
-//    private String name;
-//    private String location;
-//    private Employee[] employees;
-//    private int currentEmployeeIndex = 0;
-//
-//
-//    //-------------------------CONSTRUCTORS----------------------
-//    public Department()
-//    {
-//
-//    }
-//    public Department(String name, String location, Employee[] employees, int currentEmployeeIndex) {
-//        this.name = name;
-//        this.location = location;
-//        this.employees = employees;
-//        this.currentEmployeeIndex = currentEmployeeIndex;
-//
-//    }
-////------------------------------OBJECT INSTANCES CREATED -------------------------------------
-//
-//
-//
-//    //---------------------------BUSINESS LOGIC/GENERAL METHODS---------------------
-//    //-----------General Methods
-//    public void addEmployee (Employee employee)
-//    {
-//        employees[currentEmployeeIndex]  = employee;
-//        currentEmployeeIndex++;
-//    }
-//
-//    public int letEmployeesWorkAndReturnNumberOfEmployeesWhoWorked(int employeeWorked)
-//    {
-//        employeeWorked++;
-//        return employeeWorked;
-//    }
-//
-//    //      Compute total monthly compensation of all employees in that department
-//    public double computeDepartmentMonthlyTotalCompensation
-//    (double totalDepartmentMonthlySalary, double totalMonthlySalaryHold)
-//    {
-//        totalDepartmentMonthlySalary = totalDepartmentMonthlySalary
-//                + totalMonthlySalaryHold;
-//        return totalDepartmentMonthlySalary;
-//    }
-//
-//    //-------------------------GETTER/SETTERS----------------------
-//
-//    public String getName() {
-//        return name;
-//    }
-//
-//    public void setName(String name) {
-//        this.name = name;
-//    }
-//
-//    public String getLocation() {
-//        return location;
-//    }
-//
-//    public void setLocation(String location) {
-//        this.location = location;
-//    }
-//
-//    public Employee[] getEmployees() {
-//        return employees;
-//    }
-//
-//    public void setEmployees(Employee[] employees) {
-//        this.employees = employees;
-//    }
-//
-//    public int getCurrentIndex()
-//    {
-//        return currentEmployeeIndex;
-//    }
-//
-//    public void setCurrentIndex(int currentIndex) {
-//        this.currentEmployeeIndex = currentIndex;
-//    }
-//}
-//
+
