@@ -12,7 +12,7 @@ public class map
         Map<String, Item> itemCollection = new HashMap<>();
 
 
-        //using to constructors to input data. Key: name, value: other fields
+        // input data. Key: name, value: other fields
         Item pizza = new Item("pizza", "Cheese pizza", 10.0, 5);
         itemCollection.put("pizza", pizza);
 

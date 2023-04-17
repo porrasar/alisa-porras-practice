@@ -23,6 +23,7 @@ public class ExceptionHandling
 //        }
 
 
+
     }//main end
 
     //try and catch for arithmetic exception. throwing for File not found exception

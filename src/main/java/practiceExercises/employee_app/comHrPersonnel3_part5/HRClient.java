@@ -9,6 +9,8 @@ public class HRClient
     public static void main(String[] args)
     {//main beg
 
+//        quick question, does anybody with windows, have an issue with accessing javadocs externally (through browser)?
+//        for 'f1' to work on my laptop, i have to hit the 'fn' key AND the 'f1' key...
         //------------OBJECT INSTANCES CREATED-----------------------------
 
         //------------department object

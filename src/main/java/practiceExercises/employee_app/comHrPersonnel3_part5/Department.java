@@ -11,9 +11,9 @@ public class Department
 
     private String name;
     private String location;
-    //private Employee[] employees = new Employee[100];
+
     private List<Employee> employees = new ArrayList<>();
-    //private int currentEmployeeIndex = 0;
+
 
     //-------------------------CONSTRUCTORS----------------------
 
