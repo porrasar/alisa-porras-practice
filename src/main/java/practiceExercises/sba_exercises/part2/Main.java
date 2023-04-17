@@ -29,6 +29,7 @@ public class Main
         System.out.printf("%-20s%-20s%-10s%-10s%-10s",
                 holdItemName,holdDescription,holdPrice,holdQuantity,holdAvailableQuantity);
 
+
     }//main end
 
 }//class end
