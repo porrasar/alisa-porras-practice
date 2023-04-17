@@ -1,5 +1,7 @@
 package practiceExercises.sba_exercises.part2;
 
+import practiceExercises.employee_app.comHrPersonnel.Employee;
+
 public class Item {
 
 
@@ -13,21 +15,23 @@ public class Item {
     //List<Item> itemCollection = new ArrayList<>();
 
     //-------------------------------CONSTRUCTOR -----------------------
-
-
     public Item() {
         this.quantity = 1;
     }
 
-    public Item(String itemName, String itemDescription, double price, int availableQuantity) {
+    public Item(String itemName, String itemDescription, double price, int availableQuantity)
+    {
+
+
+        //this.quantity = Item.this();  ///????idk
         this.itemName = itemName;
         this.itemDescription = itemDescription;
         this.price = price;
         this.availableQuantity = availableQuantity;
     }
 
-    //------------------------------GETTER/SETTER-------------------------
 
+    //------------------------------GETTER/SETTER-------------------------
 
     public String getItemName() {
         return itemName;

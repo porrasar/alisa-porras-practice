@@ -23,6 +23,7 @@ public class Main
         Scanner scanner = new Scanner(new File("sample.txt"));  //accessing and reading the sample file
 
         System.out.println("-------------Testing reading sample.txt ------------");
+        System.out.printf("%-20s%-20s%-10s%-10s%n","Name","Description","Price","Avalible Quantity");
 
         while (scanner.hasNext())
         {
