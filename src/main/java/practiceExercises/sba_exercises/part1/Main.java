@@ -26,7 +26,7 @@ public class Main
 
         while (scanner.hasNext())
         {
-            String holdList = scanner.nextLine();
+           String holdList = scanner.nextLine();
            printItemCollection(holdList);
         }
         scanner.close();
