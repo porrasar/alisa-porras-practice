@@ -5,7 +5,7 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Main
-{//class beg
+{//class beg  part #3
 
     public static void main(String[] args) throws FileNotFoundException
     {//main beg

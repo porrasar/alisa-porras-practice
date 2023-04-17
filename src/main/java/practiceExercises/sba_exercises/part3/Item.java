@@ -10,23 +10,24 @@ public class Item {
     private int quantity;
     private int availableQuantity;
 
+    //List<Item> itemCollection = new ArrayList<>();
 
     //-------------------------------CONSTRUCTOR -----------------------
-
-
     public Item() {
         this.quantity = 1;
     }
 
-    public Item(String itemName, String itemDescription, double price, int availableQuantity) {
+    public Item(String itemName, String itemDescription, double price, int availableQuantity)
+    {
+        this();                                   //calling default constructor using this()
         this.itemName = itemName;
         this.itemDescription = itemDescription;
         this.price = price;
         this.availableQuantity = availableQuantity;
     }
 
-    //------------------------------GETTER/SETTER-------------------------
 
+    //------------------------------GETTER/SETTER-------------------------
 
     public String getItemName() {
         return itemName;

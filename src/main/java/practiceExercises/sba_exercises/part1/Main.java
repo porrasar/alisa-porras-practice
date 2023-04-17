@@ -28,14 +28,19 @@ public class Main
         while (scanner.hasNext())
         {
            String holdList = scanner.nextLine();
-           printItemCollection(holdList);
+           String[] holdListArray = holdList.split("  ");
+           printItemCollection(holdListArray);
         }
         scanner.close();
     }
-    private static void printItemCollection(String holdList)
+
+    private static void printItemCollection(String[] holdListArray)
     {
-        System.out.println(holdList);
+        System.out.printf("%-20s%-20s%-10s%-10s%n",
+                holdListArray[0], holdListArray[1], holdListArray[2], holdListArray[3]);
     }
 
 
 }//class end
+
+

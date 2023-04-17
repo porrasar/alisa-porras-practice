@@ -15,7 +15,8 @@ public class Item {
     //List<Item> itemCollection = new ArrayList<>();
 
     //-------------------------------CONSTRUCTOR -----------------------
-    public Item() {
+    public Item()
+    {
         this.quantity = 1;
     }
 
@@ -23,7 +24,7 @@ public class Item {
     {
 
 
-        //this.quantity = Item.this();  ///????idk
+        this();       //calling default constructor using this()
         this.itemName = itemName;
         this.itemDescription = itemDescription;
         this.price = price;
