@@ -24,7 +24,7 @@ public class Main
         int holdAvailableQuantity = pizza.getAvailableQuantity();
 
         System.out.println("-------------Testing the constructor of Item class  ------------");
-        System.out.printf("%-20s%-20s%-10s%-10s%n","Name","Description","Price","Avalible Quantity");
+        System.out.printf("%-20s%-20s%-10s%-10s%n","Name","Description","Price","Available Quantity");
 
         System.out.printf("%-20s%-20s%-10s%-10s%-10s",
                 holdItemName,holdDescription,holdPrice,holdQuantity,holdAvailableQuantity);

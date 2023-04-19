@@ -1,9 +1,6 @@
-package practiceExercises.sba_exercises.part3;
+package practiceExercises.sba_exercises.part4;
 
-import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.Arrays;
-import java.util.Scanner;
 
 public class Main {//class beg
 
@@ -12,9 +9,13 @@ public class Main {//class beg
     //---------------------------------CREATE OBJECT INSTANCE ----------------------------------
 
         MySystem mySystem = new MySystem();   // create object instance of MySystem
-        Item item = new Item();               // create object instance of Item
+        Item item1 = new Item("chips","plain",1.35,7 );
+        Item item2 = new Item("pizza","plain",1.35,7 );
 
     //---------------------------------BUSINESS LOGIC-------------------------------------
+
+        mySystem.addItem(item1);
+        mySystem.addItem(item2);
         printItemCollection(mySystem);
 
     }//main end
@@ -25,7 +26,7 @@ public class Main {//class beg
     {
         Item myItemValue;
 
-        System.out.println("--------Testing the constructor of MySystem class------");
+        System.out.println("--------Testing addItem(..) method------");
         System.out.printf("%-20s%-20s%-10s%-10s%n",
                 "Name", "Description", "Price", "Available Quantity");
 
