@@ -1,8 +1,6 @@
 package practiceExercises.sba_exercises.part3;
 
 public class Item {
-
-
     //------------------------------VARIABLES---------------------------
     private String itemName;
     private String itemDescription;
@@ -24,6 +22,11 @@ public class Item {
         this.itemDescription = itemDescription;
         this.price = price;
         this.availableQuantity = availableQuantity;
+    }
+
+    public Item(String[] s)
+    {
+
     }
 
 
