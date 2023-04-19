@@ -22,8 +22,6 @@ public class MySystem
 
     //----------------------------------BUSINESS LOGIC---------------------------------------------------
 
-
-
     //----------------------------------GENERAL METHODS---------------------------------------------------
      private void readSampleFile() throws FileNotFoundException
     {
