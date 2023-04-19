@@ -15,6 +15,6 @@ weekly 1-1.
 - employee_app failed to run
 
 # April 17th (Monday morning)
-- employee_app is done with part #3 (polymorphism)
+- employee_app is done with part #5 
   
 
