@@ -8,7 +8,7 @@ public class Item {
     private int quantity;
     private int availableQuantity;
 
-    //List<Item> itemCollection = new ArrayList<>();
+
 
     //-------------------------------CONSTRUCTOR -----------------------
     public Item() {
