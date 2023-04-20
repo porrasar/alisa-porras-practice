@@ -4,22 +4,19 @@ import java.util.ArrayList;
 
 public class MyOperation implements IMyOperations
 {//class beg
-
     //------------------------------------------VARIABLES---------------------------------------------------
     private ArrayList<String> myArrayList;
 
     //------------------------------------------CONSTRUCTOR--------------------------------------------------
-
     public MyOperation() {
 
         this.myArrayList = new ArrayList<>();
     }
 
-
     //-----------------------------------------METHODS ---------------------------------------------------
-
     @Override
-    public void convertStringArrayIntoArrayList(String[] stringArray) {
+    public void convertStringArrayIntoArrayList(String[] stringArray)
+    {
         //int countForAddingToArrayList = 0;
         for (String myForLoopString : stringArray) {
             if (myForLoopString != null)
@@ -29,12 +26,11 @@ public class MyOperation implements IMyOperations
         }
 
     }
-
     @Override
-    public void replaceAnElementInTheStringArrayListGiven(int index) {
+    public void replaceAnElementInTheStringArrayListGiven(int index)
+    {
         myArrayList.set(index, "Nah");
     }
-
     @Override
     public ArrayList<String> createANewArrayListFromExistingArray()
     {
@@ -50,11 +46,8 @@ public class MyOperation implements IMyOperations
     }
 
     //---------------------------------GETTER/SETTER METHODS-----------------------------------------------
-
-
-    public ArrayList<String> getMyArrayList() {
+    public ArrayList<String> getMyArrayList()
+    {
         return myArrayList;
     }
-
-
 }//class end
