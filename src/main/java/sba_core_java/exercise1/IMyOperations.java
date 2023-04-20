@@ -1,4 +1,4 @@
-package sba_core_java;
+package sba_core_java.exercise1;
 
 import java.util.ArrayList;
 

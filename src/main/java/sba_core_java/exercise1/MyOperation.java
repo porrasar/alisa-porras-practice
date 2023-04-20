@@ -1,9 +1,6 @@
 package sba_core_java.exercise1;
 
-import sba_core_java.IMyOperations;
-
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class MyOperation implements IMyOperations
 {//class beg
