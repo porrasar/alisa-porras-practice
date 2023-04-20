@@ -13,9 +13,7 @@ public class MyOperation implements IMyOperations
 
     //------------------------------------------CONSTRUCTOR--------------------------------------------------
 
-
-    public MyOperation()
-    {
+    public MyOperation() {
 
         this.myArrayList = new ArrayList<>();
     }
@@ -23,41 +21,41 @@ public class MyOperation implements IMyOperations
 
     //-----------------------------------------METHODS ---------------------------------------------------
 
-    public void convertStringArrayIntoArrayList(String[] stringArray)
-    {
-       int countForAddingToArrayList = 0;
-       for (String myForLoopString : stringArray)
-       {
-          if (myForLoopString != null)
-              myArrayList.add(stringArray[countForAddingToArrayList]);
-           countForAddingToArrayList++;
-       }
+    @Override
+    public void convertStringArrayIntoArrayList(String[] stringArray) {
+        //int countForAddingToArrayList = 0;
+        for (String myForLoopString : stringArray) {
+            if (myForLoopString != null)
+                // myArrayList.add(stringArray[countForAddingToArrayList]);
+                myArrayList.add(myForLoopString);
+            //    countForAddingToArrayList++;
+        }
 
     }
-    public void replaceAnElementInTheStringArrayListGiven(int index)
-    {
-        myArrayList.set(index,"Nah");
+
+    @Override
+    public void replaceAnElementInTheStringArrayListGiven(int index) {
+        myArrayList.set(index, "Nah");
     }
+
+    @Override
     public ArrayList<String> createANewArrayListFromExistingArray()
     {
-//        int countForAddingToArrayList = 0;
-//        {
-//            myArrayList.remove(index);
-////            if (myArrayList(1countForAddingToArrayList) == index)
-////            //if (myForLoopString != null)
-////                myArrayList.add(stringArray[countForAddingToArrayList]);
-//            System.out.println("");
-//        }
-//
-
-        return null;
+        ArrayList<String> newList = new ArrayList<>();
+        for (String string : myArrayList)
+        {
+            if (!string.equals("Nah"))
+            {
+                newList.add(string);
+            }
+        }
+        return newList;
     }
 
     //---------------------------------GETTER/SETTER METHODS-----------------------------------------------
 
 
-    public ArrayList<String> getMyArrayList()
-    {
+    public ArrayList<String> getMyArrayList() {
         return myArrayList;
     }
 

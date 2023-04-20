@@ -9,6 +9,7 @@ public interface IMyOperations
     void convertStringArrayIntoArrayList(String[] stringArray);
     void replaceAnElementInTheStringArrayListGiven(int index);
 
+
     ArrayList<String> createANewArrayListFromExistingArray();
 
 
